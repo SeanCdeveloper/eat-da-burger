@@ -7,7 +7,7 @@ const routes = require("./controllers/burgers_controller");
 const app = express();
 const PORT = process.env.PORT || 8080;
 // Config Settings
-app.enable('trust proxy');
+// app.enable('trust proxy');
 app.use(methodOverride('_method'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
