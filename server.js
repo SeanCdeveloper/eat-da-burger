@@ -1,4 +1,5 @@
 // Global
+require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const exphbs = require("express-handlebars");
@@ -7,7 +8,6 @@ const routes = require("./controllers/burgers_controller");
 const app = express();
 const PORT = process.env.PORT || 8080;
 // Config Settings
-// app.enable('trust proxy');
 app.use(methodOverride('_method'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
