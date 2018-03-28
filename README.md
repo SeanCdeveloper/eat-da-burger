@@ -16,8 +16,8 @@ npm install
 ```
 ### Setup Database
 ```
-mysql -u [Your MySQL Username] -p
-[Your MySQL Password]
+mysql -u <Your MySQL Username> -p
+<Your MySQL Password>
 \. \db\schema.sql
 \. \db\seeds.sql
 \q
@@ -26,12 +26,12 @@ mysql -u [Your MySQL Username] -p
 1. Create a new file and save as ".env" in the root directory.
 2. Copy and paste the following into the .env file:
 
-    DB_HOST=localhost
+    DB_HOST=[localhost]
 
-    DB_USER=root
+    DB_USER=[root]
 
-    DB_PASS=password
-3. Edit any of the values above to coordinate with your MySQL Database.
+    DB_PASS=[password]
+3. Edit any of the values in the brackets above to coordinate with your MySQL Database.
 ### Command
 `node server.js`
 ## Requirements
@@ -92,38 +92,3 @@ mysql -u [Your MySQL Username] -p
 - [x] Setup the `main.handlebars` file so it's able to be used by Handlebars.
 - [x] Setup the `index.handlebars` to have the template that Handlebars can render onto.
 - [x] Create a button in `index.handlebars` that will submit the user input into the database.
-### Directory structure
-- [x] All the recommended files and directories from the steps above should look like the following structure:
-.
-├── config
-│   ├── connection.js
-│   └── orm.js
-│ 
-├── controllers
-│   └── burgers_controller.js
-│
-├── db
-│   ├── schema.sql
-│   └── seeds.sql
-│
-├── models
-│   └── burger.js
-│ 
-├── node_modules
-│ 
-├── package.json
-│
-├── public
-│   ├── assets
-│   │   ├── css
-│   │   │   └── burger_style.css
-│   │   └── img
-│   │       └── burger.png
-│   └── test.html
-│
-├── server.js
-│
-└── views
-    ├── index.handlebars
-    └── layouts
-        └── main.handlebars
